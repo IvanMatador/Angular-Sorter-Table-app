@@ -1,0 +1,19 @@
+{
+  "name": "angular-sorter-table-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IvanMatador/Angular-Sorter-Table-app.git"
+  },
+  "author": "Ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanMatador/Angular-Sorter-Table-app/issues"
+  },
+  "homepage": "https://github.com/IvanMatador/Angular-Sorter-Table-app#readme"
+}
