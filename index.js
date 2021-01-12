@@ -1,6 +1,5 @@
-const express = require('express')
+const app = require('./app') 
 
-const app = express()
+const port =  process.env.port || 5000
 
-
-app.listen(5000, () => console.log(`Server has been started on port`))
+app.listen(port, () => console.log(`Server has been started on port ${port}!`))
