@@ -6,7 +6,7 @@ module.exports.getByParams = async function(req, res) {
   try {
     const dateValues = {dateFrom: 0, dateTo: 0};
     const queryObj = Object.values(req.query);
-    spliceDate(queryObj)
+    spliceDate(queryObj);
     const doubleArray = [[queryObj[0],queryObj[1]]];
     const keys = [queryObj[0]];
     const values = [];
@@ -102,15 +102,12 @@ module.exports.getByParams = async function(req, res) {
 
     allEntriesIds.sort((a,b)=>a.length-b.length).map(item => item.splice(0 ,1));
     const uniqEntrieIds = [...allEntriesIds[0]];
-    allEntriesIds.every(item => uniqEntrieIds.every(e => item.findIndex(i => i === e) !== -1));
-    //console.log('DATA', dateValues);
-    
+    allEntriesIds.every(item => uniqEntrieIds.every(e => item.findIndex(i => i === e) !== -1));    
   
     uniqEntrieIds.map(item => {
       const enter = allUsers.filter(i => i.idReport === item);
       filteredData.push(...enter);
     })
-    //console.log(filteredData.map(id => id.idReport))
     let finalData = []
     if (filteredData.length > 0){
       finalData = filteredData.filter(element => dateToMilliseconds(element.outputDate.date) >= dateValues.dateFrom
@@ -121,8 +118,6 @@ module.exports.getByParams = async function(req, res) {
     }
     
     console.log(finalData.map(id => id.idReport))
-
-
 
     if (!allEntriesIds.every(item => uniqEntrieIds.every(e => item.findIndex(i => i === e) !== -1))) {
       filteredData.splice(0)

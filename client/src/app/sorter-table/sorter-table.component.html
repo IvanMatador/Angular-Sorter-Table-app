@@ -95,7 +95,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>
           <mat-form-field  class="sell6" appearance="legacy">
           <mat-label>Вихідна дата документу</mat-label>
-          <mat-date-range-input [formGroup]="range" [rangePicker]="picker" (click)="resetDate()">
+          <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
             <input matStartDate formControlName="start" [startPicker]="startPicker" placeholder="з" (dateInput)="dateChangeStart($event.value)">
             <input matEndDate formControlName="end" [endPicker]="endPicker" placeholder="по" (dateInput)="dateChangeEnd($event.value)">
           </mat-date-range-input>

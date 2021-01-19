@@ -6,9 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SorterTableComponent } from './sorter-table/sorter-table.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeadSelectComponent } from './sorter-table/head-select/head-select.component';
-import { HeadInputComponent } from './sorter-table/head-input/head-input.component';
-import { HeadDatapickerComponent } from './sorter-table/head-datapicker/head-datapicker.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
@@ -21,9 +18,6 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
     SorterTableComponent,
     HeaderComponent,
     SidebarComponent,
-    HeadSelectComponent,
-    HeadInputComponent,
-    HeadDatapickerComponent,
   ],
   imports: [
     BrowserModule,
