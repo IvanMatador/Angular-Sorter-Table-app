@@ -1,0 +1,37 @@
+.header {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 30px;
+  background-color: #19406b;
+  color: #fff;
+}
+
+.logo {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  margin: auto 10px;
+  width: 50px;
+  height: 40px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.right-part-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 210px;
+  /* height: 40px; */
+  padding: 0 20px;
+}
+
+.log-out {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background: no-repeat center/70% url('../../assets/images/logout.png');
+  cursor: pointer;
+}

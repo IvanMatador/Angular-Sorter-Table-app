@@ -1,0 +1,80 @@
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px 10px;
+  width: 3%;
+  min-height: 250px;
+  height: 100%;
+  background: #fff;
+}
+
+.table {
+  width: 97%;
+}
+
+.button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  background: no-repeat center/80% url('../../assets/images/sprite.png');
+  background-position-y: 5px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  width: 40px;
+  height: 40px;
+  background: no-repeat center/80% url('../../assets/images/sprite-lite.png');
+  background-position-y: 5px;
+  background-color: #19406b;
+}
+
+.menu-button,
+.menu-button:hover {
+  background-position-y: 5px;
+}
+
+.schedule-button {
+  background-position-y: -27px;
+}
+
+.schedule-button:hover {
+  background-position-y: -34px;
+}
+
+.avatar-button {
+  background-position-y: -57px;
+}
+
+.avatar-button:hover {
+  background-position-y: -76px;
+}
+
+.build-button {
+  background-position-y: -87px;
+}
+
+.build-button:hover {
+  background-position-y: -118px;
+}
+
+.cap-button {
+  background-position-y: -116px;
+}
+
+.cap-button:hover {
+  background-position-y: -157px;
+}
+
+.list-button {
+  background-position-y: -141px;
+}
+
+.list-button:hover {
+  background-position-y: -189px;
+}

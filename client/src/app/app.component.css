@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-container {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.header {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 30px;
+  background-color: #19406b;
+  color: #fff;
+}
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px 10px;
+  width: 3%;
+  min-height: 250px;
+  height: 100%;
+  background: #fff;
+}
+
+.sorter-table {
+  display: flex;
+  width: 100%;
+}
+
