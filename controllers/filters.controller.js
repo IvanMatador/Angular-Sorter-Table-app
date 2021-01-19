@@ -6,6 +6,7 @@ module.exports.getByParams = async function(req, res) {
   try {
     const dateValues = {dateFrom: 0, dateTo: 0};
     const queryObj = Object.values(req.query);
+    console.log(queryObj)
     spliceDate(queryObj);
     const doubleArray = [[queryObj[0],queryObj[1]]];
     const keys = [queryObj[0]];
@@ -14,6 +15,7 @@ module.exports.getByParams = async function(req, res) {
     const countTypesArray = [];
     const typesAndEntries = [];
     const allEntriesIds = [];
+    let finalData = []
     
     function spliceDate(arr) {
 
@@ -108,7 +110,7 @@ module.exports.getByParams = async function(req, res) {
       const enter = allUsers.filter(i => i.idReport === item);
       filteredData.push(...enter);
     })
-    let finalData = []
+    
     if (filteredData.length > 0){
       finalData = filteredData.filter(element => dateToMilliseconds(element.outputDate.date) >= dateValues.dateFrom
                                     && dateToMilliseconds(element.outputDate.date) <= dateValues.dateTo);
@@ -116,8 +118,10 @@ module.exports.getByParams = async function(req, res) {
       finalData = allUsers.filter(element => dateToMilliseconds(element.outputDate.date) >= dateValues.dateFrom
                                     && dateToMilliseconds(element.outputDate.date) <= dateValues.dateTo);
     }
-    
-    console.log(finalData.map(id => id.idReport))
+
+    if (finalData.length === 0 && filteredData.length > 0 ) {
+      finalData = filteredData;
+    }
 
     if (!allEntriesIds.every(item => uniqEntrieIds.every(e => item.findIndex(i => i === e) !== -1))) {
       filteredData.splice(0)

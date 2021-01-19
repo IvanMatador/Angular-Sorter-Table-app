@@ -19,7 +19,6 @@ export class UsersService {
     const innerObject = paramsObj.map(item => item = {...item})
     const objFromArray = {...innerObject};
     let params = {};   
-    
     this.buildHttpParams(params, objFromArray, "");
     return this.http.get<User[]>(`/api/filters/`, { params });
   }

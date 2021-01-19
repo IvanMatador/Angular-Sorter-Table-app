@@ -1,6 +1,42 @@
+.table-container {
+  margin: 30px;
+  padding: 0 15px 15px 15px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.pre-table {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #19406b;
+}
+
+.icon {
+  display: block;
+  margin-right: 20px;
+}
+
+.restore-icon {
+  font-size: 24px;
+  transform: translate(-2px, -2px);
+}
+
+.table-title {
+  border: none;
+}
+
 .sorter-table {
-  width: 100%;
-  padding: 30px;
+  border: none;
+  color: #19406b;
 }
 
 .mat-form-field {
@@ -10,6 +46,7 @@
 
 th, td {
   width: 12%;
+  color: #19406b;
 }
 
 .mat-cell {
@@ -62,14 +99,8 @@ th, td {
   width: 100px;
 }
 
-.mat-fab {
-  width: 30px;
-  height: 30px;
+.mat-mini-fab.mat-accent {
+  background-color: transparent;
+  box-shadow: none;
 }
-
-.material-icons {
-  font-size: 25px;
-  transform: translateY(-14px);
-}
-
 

@@ -138,7 +138,6 @@ export class SorterTableComponent implements OnInit {
   }
 
   addFilter(value: string, type: string) {
-
     this.multiFilter(value, type);
     
     if (this.dataSource.paginator) {
