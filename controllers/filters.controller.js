@@ -6,7 +6,6 @@ module.exports.getByParams = async function(req, res) {
   try {
     const dateValues = {dateFrom: 0, dateTo: 0};
     const queryObj = Object.values(req.query);
-    console.log(queryObj)
     spliceDate(queryObj);
     const doubleArray = [[queryObj[0],queryObj[1]]];
     const keys = [queryObj[0]];
